@@ -61,6 +61,11 @@ commands:
             echo 'export TESTS_REPORT_FILE="test-results/graphics/results.xml"' >> $BASH_ENV
             echo 'export DEVICE_PIXEL_RATIO=<< parameters.devicePixelRatio >>' >> $BASH_ENV
       - run: scripts/run-graphics-tests.sh
+      - run:
+          name: "Generate archive with screenshots"
+          command: |
+            tar -czvf ./screenshots.tar.gz graphics-cmp-data/
+            mv ./screenshots.tar.gz ./graphics-cmp-data/screenshots.tar.gz
       - store_test_results:
           path: test-results/
       - store_artifacts:
