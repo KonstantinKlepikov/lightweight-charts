@@ -41,7 +41,7 @@ export function setLineStyle(ctx: CanvasRenderingContext2D, style: LineStyle): v
 	const dashPatterns = {
 		[LineStyle.Solid]: [],
 		[LineStyle.Dotted]: [ctx.lineWidth, ctx.lineWidth],
-		[LineStyle.Dashed]: [2 * ctx.lineWidth, 2 * ctx.lineWidth],
+		[LineStyle.Dashed]: [3 * ctx.lineWidth, 2 * ctx.lineWidth],
 		[LineStyle.LargeDashed]: [6 * ctx.lineWidth, 6 * ctx.lineWidth],
 		[LineStyle.SparseDotted]: [ctx.lineWidth, 4 * ctx.lineWidth],
 	};
